@@ -199,6 +199,8 @@ export class D100 extends Die {
 	}
 }
 
+type CoinResult = "heads" | "tails";
+
 /**
  * Represents a coin.\
  * Has an equal chance of heads or tails being selected each time it is flipped.
@@ -209,7 +211,6 @@ export class D100 extends Die {
  * console.log(c.getResult); // Tails
  * ```
  */
-type CoinResult = "heads" | "tails";
 export class Coin {
 	private value: CoinResult = "heads";
 
