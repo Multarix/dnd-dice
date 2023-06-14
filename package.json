@@ -1,0 +1,26 @@
+{
+  "type": "commonjs",
+  "name": "dnd-dice",
+  "version": "1.0.0",
+  "description": "A collection of classes for standard dice rolls and coin flips.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dnd",
+    "dice",
+    "dragon",
+    "dungeon",
+    "roll",
+    "flip",
+    "coin",
+    "die",
+    "d&d",
+    "dungeons",
+    "and",
+    "dragons"
+  ],
+  "author": "Multarix",
+  "license": "MIT"
+}
