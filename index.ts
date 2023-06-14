@@ -73,8 +73,9 @@ export default class Die {
 	 * console.log(d.value); // 12
 	 * ```
 	 */
-	roll(): void {
+	roll(): number {
 		this.rolledValue = this.numberGenerator(1, this.numberOffaces);
+		return this.rolledValue;
 	}
 	
 	/**
@@ -119,7 +120,7 @@ export class D4 extends Die {
  */
 export class D6 extends Die {
 	constructor() {
-		super(4)
+		super(6)
 	}
 }
 
@@ -134,7 +135,7 @@ export class D6 extends Die {
  */
 export class D8 extends Die {
 	constructor() {
-		super(4)
+		super(8)
 	}
 }
 
@@ -149,7 +150,7 @@ export class D8 extends Die {
  */
 export class D10 extends Die {
 	constructor() {
-		super(4)
+		super(10)
 	}
 }
 
@@ -164,7 +165,7 @@ export class D10 extends Die {
  */
 export class D12 extends Die {
 	constructor() {
-		super(4)
+		super(12)
 	}
 }
 
@@ -208,19 +209,21 @@ export class D100 extends Die {
  * console.log(c.getResult); // Tails
  * ```
  */
+type CoinResult = "heads" | "tails";
 export class Coin {
-	private value: string = "Heads";
+	private value: CoinResult = "heads";
 
 	constructor() {
 		this.flip();
 	}
 
-	flip(): void {
+	flip(): CoinResult {
 		const value = Math.floor(Math.random() * 2);
-		this.value = (value === 0) ? "Heads" : "Tails";
+		this.value = (value === 0) ? "heads" : "tails";
+		return this.value;
 	}
 
-	get getResult() {
+	get getResult(): CoinResult {
 		return this.value;
 	}
 }
