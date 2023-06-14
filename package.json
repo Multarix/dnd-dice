@@ -1,12 +1,12 @@
 {
   "name": "dnd-dice",
   "author": "Multarix",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A collection of classes for standard dice rolls and coin flips.",
   "type": "module",
   "repository": {
-	"type": "git",
-	"url": "git+https://github.com/Multarix/dnd-dice.git"
+    "type": "git",
+    "url": "git+https://github.com/Multarix/dnd-dice.git"
   },
   "license": "MIT",
   "main": "dist/index.js",
@@ -26,18 +26,18 @@
     "dragons"
   ],
   "devDependencies": {
-	"@types/node": "^20.1.0",
-	"@typescript-eslint/eslint-plugin": "^5.59.2",
-	"@typescript-eslint/parser": "^5.59.2",
-	"eslint": "^8.40.0",
-	"tsc-hooks": "^1.1.2"
+    "@types/node": "^20.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.2",
+    "@typescript-eslint/parser": "^5.59.2",
+    "eslint": "^8.40.0",
+    "tsc-hooks": "^1.1.2"
   },
   "prepublish": "tsc",
   "scripts": {
     "build": "tsc"
   },
   "bugs": {
-	"url": "https://github.com/Multarix/dnd-dice/issues"
+    "url": "https://github.com/Multarix/dnd-dice/issues"
   },
   "homepage": "https://projects.multarix.com/project/dice/"
 }
