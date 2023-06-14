@@ -1,7 +1,9 @@
+[![NPM](https://nodei.co/npm/dnd-dice.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/dnd-dice/)
+
 A simple collection of classes for quickly creating and using standard dice rolls and even coin flips.
 
 ```js
-import { Die, Coin } = from 'dnd-dice';
+import { Die, Coin } from 'dnd-dice';
 
 const d = new Die(50);
 console.log(d.getValue()); // 1-50
