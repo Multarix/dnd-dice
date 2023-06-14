@@ -20,6 +20,7 @@
 /**
  * Represents a multi-faced die.\
  * Generates a random number from 1 to the provided number.
+ *
  * ```js
  * const d = new Die(15);
  * console.log(d.value); // 3
@@ -65,7 +66,8 @@ export default class Die {
 	}
 	
 	/**
-	 * Re-rolls the die and sets the value to a random number between 1 and the number of faces on the die.
+	 * Re-rolls the die and returns a random number between 1 and the number of faces on the die.
+	 *
 	 * ```js
 	 * const d = new Die(15);
 	 * console.log(d.value); // 3
@@ -79,7 +81,7 @@ export default class Die {
 	}
 	
 	/**
-	 * The current value of the die.
+	 * The result of the latest die roll.
 	 */
 	get getValue() { // Getter so the value can't be changed
 		return this.rolledValue;
@@ -97,6 +99,7 @@ export default class Die {
 /**
  * Represents a standard 4 sided die.\
  * Generates a random number from 1 to 4.
+ *
  * ```js
  * const d = new D4();
  * console.log(d.value); // 2
@@ -112,6 +115,7 @@ export class D4 extends Die {
 /**
  * Represents a standard 6 sided die.\
  * Generates a random number from 1 to 6.
+ *
  * ```js
  * const d = new D6();
  * console.log(d.value); // 4
@@ -127,6 +131,7 @@ export class D6 extends Die {
 /**
  * Represents a standard 8 sided die.\
  * Generates a random number from 1 to 8.
+ *
  * ```js
  * const d = new D8();
  * console.log(d.value); // 6
@@ -142,6 +147,7 @@ export class D8 extends Die {
 /**
  * Represents a standard 10 sided die.\
  * Generates a random number from 1 to 10.
+ *
  * ```js
  * const d = new D10();
  * console.log(d.value); // 4
@@ -157,6 +163,7 @@ export class D10 extends Die {
 /**
  * Represents a standard 12 sided die.\
  * Generates a random number from 1 to 12.
+ *
  * ```js
  * const d = new D12();
  * console.log(d.value); // 6
@@ -172,6 +179,7 @@ export class D12 extends Die {
 /**
  * Represents a standard 20 sided die.\
  * Generates a random number from 1 to 20.
+ *
  * ```js
  * const d = new D20();
  * console.log(d.value); // 6
@@ -187,6 +195,7 @@ export class D20 extends Die {
 /**
  * Represents a standard 100 sided die.\
  * Generates a random number from 1 to 100.
+ *
  * ```js
  * const d = new D100();
  * console.log(d.value); // 55
@@ -204,6 +213,7 @@ type CoinResult = "heads" | "tails";
 /**
  * Represents a coin.\
  * Has an equal chance of heads or tails being selected each time it is flipped.
+ *
  * ```js
  * const c = new Coin();
  * console.log(c.getResult); // Heads
@@ -217,13 +227,26 @@ export class Coin {
 	constructor() {
 		this.flip();
 	}
-
+	
+	/**
+	 * Flips the coin and returns either "heads" or "tails" at an equal chance.
+	 *
+	 * ```js
+	 * const c = new Coin();
+	 * console.log(c.getResult); // Heads
+	 * c.flip();
+	 * console.log(c.getResult); // Tails
+	 * ```
+	 */
 	flip(): CoinResult {
 		const value = Math.floor(Math.random() * 2);
 		this.value = (value === 0) ? "heads" : "tails";
 		return this.value;
 	}
-
+	
+	/**
+	 * The result of the latest coin flip.
+	 */
 	get getResult(): CoinResult {
 		return this.value;
 	}
