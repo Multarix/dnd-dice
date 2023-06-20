@@ -83,14 +83,14 @@ export default class Die {
 	/**
 	 * The result of the latest die roll.
 	 */
-	get getValue() { // Getter so the value can't be changed
+	get value() { // Getter so the value can't be changed
 		return this.rolledValue;
 	}
 	
 	/**
 	 * The number of faces on the die.
 	 */
-	get getFaces() { // Getter so the value can't be changed
+	get faces() { // Getter so the value can't be changed
 		return this.numberOffaces;
 	}
 }
@@ -247,7 +247,7 @@ export class Coin {
 	/**
 	 * The result of the latest coin flip.
 	 */
-	get getResult(): CoinResult {
+	get result(): CoinResult {
 		return this.value;
 	}
 }
