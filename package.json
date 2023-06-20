@@ -1,7 +1,7 @@
 {
   "name": "dnd-dice",
   "author": "Multarix",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A collection of classes for standard dice rolls and coin flips.",
   "type": "module",
   "repository": {
@@ -39,5 +39,5 @@
   "bugs": {
     "url": "https://github.com/Multarix/dnd-dice/issues"
   },
-  "homepage": "https://projects.multarix.com/project/dice/"
+  "homepage": "https://projects.multarix.com/dice/"
 }
